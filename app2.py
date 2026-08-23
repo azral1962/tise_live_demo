@@ -22,12 +22,12 @@ from dotenv import load_dotenv
 #          -> llama.cpp -> Q1 -> Q2 -> Q3 -> Q4
 # ============================================================
 
-APP_DIR = Path(__file__).resolve().parent
-load_dotenv(dotenv_path=APP_DIR / ".env")
+load_dotenv()
 
+APP_DIR = Path(__file__).resolve().parent
 DB_PATH = os.getenv("TISE_DB_PATH", str(APP_DIR / "tise_demo.db"))
 
-LLAMA_SERVER = os.getenv("LLAMA_SERVER", "http://100.110.236.59:8088").rstrip("/")
+LLAMA_SERVER = os.getenv("LLAMA_SERVER", "http://100.77.236.59:8088").rstrip("/")
 LLAMA_API = f"{LLAMA_SERVER}/v1"
 
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN1", "").strip()
@@ -684,11 +684,11 @@ else:
     )
 
 col_a, col_b = st.sidebar.columns(2)
-if col_a.button("＋ Demo data", use_container_width=True):
+if col_a.button("＋ Demo data", width="stretch"):
     add_demo_messages()
     st.rerun()
 
-if col_b.button("🗑 Reset", use_container_width=True):
+if col_b.button("🗑 Reset", width="stretch"):
     clear_messages()
     st.session_state.pop("analysis", None)
     st.session_state.pop("raw_analysis", None)
@@ -817,7 +817,7 @@ with left:
             data=rows_to_csv(current_rows),
             file_name="tise_audience_messages.csv",
             mime="text/csv",
-            use_container_width=True,
+            width="stretch",
         )
 
 with right:
@@ -832,7 +832,7 @@ with right:
     if st.button(
         "🧠 ANALYZE COLLECTIVE INTELLIGENCE",
         type="primary",
-        use_container_width=True,
+        width="stretch",
         disabled=analyze_disabled,
     ):
         with st.spinner("TISE sedang menyusun Q1 → Q2 → Q3 → Q4 ..."):

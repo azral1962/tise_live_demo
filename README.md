@@ -1,37 +1,76 @@
-# TISE Live Demo
+# TISE Live Demo — Iterative Q-Cycle
 
-Audience sends free-text input through Telegram. Streamlit collects it into
-SQLite and sends the collective dataset to a llama.cpp server. The model then
-structures the result into Q1-Q4 and returns a question to the audience.
+Versi ini memperbaiki loop demo TISE sehingga voting/feedback audience **benar-benar kembali ke Q-Cycle**.
 
-Default llama.cpp server:
+## Core flow
 
 ```text
-http://100.110.236.59:8088
+Audience messages
+      ↓
+Collective Intelligence
+      ↓
+Q-Cycle 1: Q1 → Q2 → Q3 → Q4
+      ↓
+Find least-complete Q + critical gap
+      ↓
+Ask audience / vote A-B-C
+      ↓
+Votes + new comments become new evidence
+      ↓
+Q-Cycle 2: revise and re-score Q1 → Q2 → Q3 → Q4
+      ↓
+repeat ...
+      ↓
+STOP only when Q1, Q2, Q3, Q4 pass completion gate
 ```
 
-## 1. Create a Telegram bot
+## Completion gate
 
-In Telegram, open `@BotFather`, create a dedicated bot, and copy its token.
+Default gate:
 
-Copy `.env.example` to `.env`:
+- score >= 85/100, AND
+- `critical_gaps` is empty.
 
-```bash
-cp .env.example .env
-```
-
-Edit:
+Threshold can be changed in `.env`:
 
 ```text
-TELEGRAM_BOT_TOKEN=123456:ABC...
+TISE_COMPLETENESS_THRESHOLD=85
 ```
 
-If you want to test without Telegram, leave the token empty. The Streamlit
-manual input and "Demo data" button still work.
+The final `complete` and `all_complete` values are normalized in Python, not accepted blindly from the LLM.
 
-## 2. Install
+## What is persisted
 
-Recommended Python: 3.10+
+SQLite now contains:
+
+- `messages`: audience comments/evidence
+- `votes`: one current vote per participant per cycle
+- `cycles`: every Q1-Q4 analysis snapshot and message cutoff
+- `settings`: active vote and challenge state
+
+This gives an audit trail of how the collective intelligence changes the engineering description.
+
+## Telegram voting
+
+When a vote is open, audience can send:
+
+```text
+A
+B
+C
+```
+
+or:
+
+```text
+/vote A
+```
+
+The same participant can change their vote; the latest choice replaces the previous one for that cycle.
+
+A normal Telegram message is treated as qualitative evidence for the next iteration.
+
+## Install
 
 ```bash
 python -m venv .venv
@@ -47,52 +86,45 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-## 3. Test llama.cpp
+Copy environment file:
 
-From the machine that runs Streamlit:
+```bash
+cp .env.example .env
+```
+
+Example:
+
+```text
+LLAMA_SERVER=http://100.110.236.59:8088
+TELEGRAM_BOT_TOKEN=YOUR_BOT_TOKEN
+TELEGRAM_ACK=true
+TELEGRAM_DROP_PENDING=true
+TISE_COMPLETENESS_THRESHOLD=85
+```
+
+## Test llama.cpp
 
 ```bash
 curl http://100.110.236.59:8088/health
 ```
 
-The llama.cpp server must be listening on a network-reachable interface, for
-example:
-
-```bash
-./llama-server \
-  -m /path/to/model.gguf \
-  --host 0.0.0.0 \
-  --port 8088
-```
-
-## 4. Run
+## Run
 
 ```bash
 streamlit run app.py
 ```
 
-Open the Streamlit URL shown in the terminal, normally:
+## Auditorium operation
 
-```text
-http://localhost:8501
-```
+1. Presenter defines the challenge.
+2. Audience sends initial evidence through Telegram.
+3. Presenter clicks **START Q-CYCLE 1**.
+4. TISE creates Q1-Q4 and scores completeness.
+5. TISE automatically focuses on the least-complete Q.
+6. Audience votes A/B/C and may add reasons/comments.
+7. Presenter clicks **CLOSE FEEDBACK & RUN Q-CYCLE N+1**.
+8. Vote result + new comments + previous Q descriptions go back into llama.cpp.
+9. Q1-Q4 are revised and re-scored.
+10. Repeat until all Q pass the completion gate.
 
-## 5. Auditorium flow
-
-1. Presenter shows the challenge.
-2. Audience scans the Telegram QR.
-3. Audience sends needs, experiences, constraints, criticisms, and ideas.
-4. Live Feed shows contributions using pseudonymous IDs.
-5. Presenter presses **ANALYZE COLLECTIVE INTELLIGENCE**.
-6. llama.cpp generates Q1, Q2, Q3, Q4.
-7. TISE shows disagreements and ethics/guardrails.
-8. TISE asks a new question and proposes three vote options.
-9. Audience responds again: the cycle continues.
-
-## Useful demo safeguards
-
-- Use a dedicated Telegram bot.
-- Do not ask the audience to submit private/sensitive data.
-- The app pseudonymizes Telegram participant IDs before display.
-- Audience text is explicitly treated as untrusted DATA in the LLM system prompt.
-- Keep the manual Streamlit input and "Demo data" button as fallback.
+The pause between cycles is intentional: TISE should not hallucinate completeness by repeatedly asking itself. A new iteration requires **new human evidence** (vote or comment).
