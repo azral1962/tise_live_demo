@@ -1,0 +1,467 @@
+---
+title: "TISE"
+subtitle: "Dari suara kolektif menjadi keputusan rekayasa yang dapat diuji"
+author: "Live demo · Quarto Reveal.js"
+lang: id
+format:
+  revealjs:
+    theme: [default, tise-slides.scss]
+    width: 1600
+    height: 900
+    margin: 0.06
+    slide-number: c/t
+    show-slide-number: all
+    transition: fade
+    background-transition: fade
+    navigation-mode: linear
+    controls: true
+    progress: true
+    center: false
+    hash: true
+    embed-resources: true
+    footer: "TISE Live Demo · Iterative Q-Cycle"
+mermaid:
+  theme: neutral
+execute:
+  echo: false
+---
+
+## TISE mengubah keragaman menjadi proses rekayasa
+
+::: {.kicker}
+Masalah yang ingin diselesaikan
+:::
+
+::: {.big-statement}
+Masukan manusia biasanya kaya konteks—tetapi tersebar, bertentangan, dan mudah didorong terlalu cepat menuju solusi.
+:::
+
+::: {.signal-line}
+TISE menyusun masukan itu menjadi **deskripsi yang dapat diuji**, menemukan gap terpenting, lalu mengembalikannya kepada manusia.
+:::
+
+**Bukan sekadar polling.** Voting adalah evidence preferensi, bukan kebenaran otomatis.
+
+::: {.notes}
+[Sources]
+
+- `../README.md` — core flow dan peran feedback audience.
+- `../app3.py` — prompt sistem: disagreement, voting, evidence, dan human authority.
+:::
+
+## Tiga bentuk kecerdasan memegang peran yang berbeda
+
+::: {.triad}
+::: {}
+### Natural intelligence
+
+Pengalaman, nilai, kreativitas, penilaian situasional, dan keputusan manusia.
+:::
+
+::: {}
+### Collective intelligence
+
+Pola, keragaman, konflik, konsensus, serta pengetahuan yang muncul dari banyak pihak.
+:::
+
+::: {}
+### Artificial intelligence
+
+Menyintesis evidence, menyusun model masalah, menunjukkan gap, dan membantu proses belajar.
+:::
+:::
+
+::: {.big-statement}
+AI membantu struktur berpikir; **otoritas keputusan tetap pada manusia**.
+:::
+
+::: {.notes}
+[Sources]
+
+- `../app.py` — definisi Triune-Intelligence Smart Engineering dalam system prompt.
+- `../app3.py` — aturan human authority dan co-learning.
+:::
+
+## Q-Cycle menahan tim agar tidak melompat ke solusi
+
+::: {.q-cycle}
+::: {.q-step}
+<div class="q-label">Q1</div>
+<div class="q-name">Problem / Opportunity</div>
+
+Siapa yang terdampak? Apa mismatch-nya? Outcome apa yang harus berubah?
+:::
+
+::: {.q-step}
+<div class="q-label">Q2</div>
+<div class="q-name">Functional analysis</div>
+
+Apa yang harus mampu dilakukan sistem—tanpa prematur memilih teknologi?
+:::
+
+::: {.q-step}
+<div class="q-label">Q3</div>
+<div class="q-name">Architecture</div>
+
+Bagaimana kapabilitas, peran, aliran, kontrol, dan governance diorganisasi?
+:::
+
+::: {.q-step}
+<div class="q-label">Q4</div>
+<div class="q-name">Construction / validation</div>
+
+Apa yang dibangun, diuji, dioperasikan, dipelajari, dan direplikasi?
+:::
+:::
+
+Setiap Q harus dapat ditelusurkan kembali ke evidence manusia.
+
+::: {.notes}
+[Sources]
+
+- `../app3.py` — `Q_CRITERIA` dan `qcycle_system_prompt()`.
+- `../README.md` — urutan Q1–Q4.
+:::
+
+## “Complete” harus dibuktikan, bukan sekadar diklaim model
+
+::: {.formula}
+score ≥ <span class="gold">85/100</span>
+<span class="operator">AND</span>
+critical gaps = <span class="accent">0</span>
+:::
+
+:::: {.columns}
+::: {.column width="52%"}
+### Model mengusulkan
+
+- ringkasan dan evidence;
+- skor Q1–Q4;
+- critical gaps;
+- pertanyaan dan opsi vote berikutnya.
+:::
+
+::: {.column width="48%"}
+### Python memutuskan gate
+
+- skor dibatasi 0–100;
+- status `complete` dihitung ulang;
+- Q terlemah menjadi fokus;
+- semua Q harus lolos bersama.
+:::
+::::
+
+::: {.signal-line}
+Skor naik karena **evidence baru**, bukan karena siklus sudah berulang berkali-kali.
+:::
+
+::: {.notes}
+[Sources]
+
+- `../README.md` — completion gate default.
+- `../app3.py` — `normalize_analysis()` dan `COMPLETENESS_THRESHOLD`.
+:::
+
+## Audience berada di dalam control loop
+
+```{mermaid}
+%%| fig-width: 13
+%%| fig-height: 5.6
+flowchart LR
+    A[Masukan audience] --> B[Collective evidence]
+    B --> C[Analisis Q1–Q4]
+    C --> D[Temukan Q terlemah]
+    D --> E[Pertanyaan + vote A/B/C]
+    E --> F[Alasan, koreksi, vote]
+    F --> B
+    C -->|semua gate lolos| G[Siap pilot / implementasi]
+
+    classDef human fill:#f5f1e8,stroke:#0c766f,stroke-width:3px,color:#142a26;
+    classDef ai fill:#dceee9,stroke:#123d37,stroke-width:3px,color:#142a26;
+    classDef done fill:#f7e3bd,stroke:#a96608,stroke-width:3px,color:#142a26;
+    class A,E,F human;
+    class B,C,D ai;
+    class G done;
+```
+
+Loop sengaja berhenti di antara siklus: iterasi berikutnya membutuhkan evidence manusia baru.
+
+::: {.notes}
+[Sources]
+
+- `../README.md` — iterative Q-Cycle dan alasan pause antarsiklus.
+- `../app3.py` — open/close vote dan syarat evidence untuk cycle berikutnya.
+:::
+
+## Demo memisahkan kanal masukan, reasoning, dan audit
+
+```{mermaid}
+%%| fig-width: 13
+%%| fig-height: 5.7
+flowchart LR
+    subgraph Channels[Audience channels]
+      TG[Telegram bot]
+      WEB[Web form]
+    end
+    subgraph App[Streamlit app]
+      FEED[Live feed]
+      ENGINE[Q-Cycle engine]
+      VIEW[Presenter view]
+    end
+    DB[(SQLite audit store)]
+    LLM[llama.cpp<br/>OpenAI-compatible API]
+
+    TG --> DB
+    WEB --> DB
+    DB --> FEED
+    DB --> ENGINE
+    ENGINE --> LLM
+    LLM --> ENGINE
+    ENGINE --> DB
+    ENGINE --> VIEW
+    VIEW --> TG
+
+    classDef app fill:#dceee9,stroke:#123d37,stroke-width:3px,color:#142a26;
+    classDef store fill:#f7e3bd,stroke:#a96608,stroke-width:3px,color:#142a26;
+    class FEED,ENGINE,VIEW app;
+    class DB store;
+```
+
+`app3.py` adalah implementasi yang paling sesuai dengan alur iteratif ini.
+
+::: {.notes}
+[Sources]
+
+- `../app3.py` — Telegram collector, SQLite functions, llama client, dan Streamlit UI.
+- `../requirements.txt` — dependensi aplikasi.
+:::
+
+## Satu siklus auditorium bergerak dalam enam langkah
+
+::: {.process-line}
+::: {}
+**01**
+
+Presenter menetapkan challenge.
+:::
+::: {}
+**02**
+
+Audience mengirim evidence awal.
+:::
+::: {}
+**03**
+
+TISE menyusun dan menilai Q1–Q4.
+:::
+::: {}
+**04**
+
+Sistem memilih Q dengan skor terendah.
+:::
+::: {}
+**05**
+
+Audience memberi alasan atau vote A/B/C.
+:::
+::: {}
+**06**
+
+Presenter menutup feedback dan menjalankan cycle baru.
+:::
+:::
+
+::: {.big-statement}
+Hasil vote dan komentar baru kembali masuk ke prompt bersama deskripsi Q sebelumnya.
+:::
+
+::: {.notes}
+[Sources]
+
+- `../README.md` — auditorium operation.
+- `../app3.py` — tombol start cycle dan close feedback/run next cycle.
+:::
+
+## Telegram dan web masuk ke evidence pipeline yang sama
+
+:::: {.columns}
+::: {.column width="50%"}
+### Telegram
+
+- QR mengarahkan audience ke bot.
+- Pesan biasa menjadi evidence kualitatif.
+- Saat vote terbuka: `A`, `B`, `C`, atau `/vote A`.
+- Peserta dapat mengganti vote dalam cycle yang sama.
+:::
+
+::: {.column width="50%"}
+### Web fallback
+
+- Alias opsional untuk komentar.
+- Form evidence tersedia tanpa Telegram.
+- Tab vote mencatat pilihan ke cycle aktif.
+- Sumber tetap ditandai untuk audit.
+:::
+::::
+
+::: {.signal-line}
+Satu peserta memiliki **satu vote terkini per cycle**; pilihan terbaru menggantikan pilihan lama.
+:::
+
+::: {.notes}
+[Sources]
+
+- `../README.md` — Telegram voting semantics.
+- `../app3.py` — `record_vote()`, Telegram parser, dan manual input/vote forms.
+:::
+
+## Presenter melihat loop, bukan hanya jawaban AI
+
+::: {.screen-map}
+::: {.sidebar-map}
+### Presenter control
+
+- challenge aktif;
+- status llama.cpp;
+- status Telegram;
+- threshold kelengkapan;
+- demo data dan reset.
+:::
+
+::: {}
+### Main stage
+
+**Live feed** memperlihatkan evidence terbaru dan jumlah peserta.
+
+**Intelligence engine** menjalankan cycle dan menunjukkan evidence yang masih ditunggu.
+
+**Current best description** menampilkan Q1–Q4, score, gap, triune learning, tensions, ethics, serta pertanyaan berikutnya.
+
+**History** menyimpan snapshot dan raw model output setiap cycle.
+:::
+:::
+
+::: {.notes}
+[Sources]
+
+- `../app3.py` — sidebar, metrics, live feed, engine, current cycle output, dan history UI.
+:::
+
+## SQLite membuat proses dapat ditelusuri
+
+:::: {.columns}
+::: {.column width="47%"}
+::: {.db-list}
+`messages` — komentar dan evidence  
+`votes` — pilihan terkini per peserta/cycle  
+`cycles` — snapshot analisis Q1–Q4  
+`settings` — challenge dan vote aktif  
+`telegram_users` — peserta bot terdaftar
+:::
+:::
+
+::: {.column width="53%"}
+### Mengapa audit trail penting?
+
+- terlihat evidence apa yang mengubah deskripsi;
+- disagreement tidak hilang di balik ringkasan;
+- keputusan dapat ditinjau kembali;
+- raw output model tetap tersedia;
+- manusia dapat menilai kualitas proses belajar.
+:::
+::::
+
+::: {.notes}
+[Sources]
+
+- `../app3.py` — `init_db()`, `save_cycle()`, `fetch_cycles()`, dan history rendering.
+- `../README.md` — persisted data dan audit trail.
+:::
+
+## Challenge bawaan membuat konsep segera konkret
+
+> Bagaimana kampus dapat menyediakan makanan sehat dan terjangkau sekaligus mengurangi food waste?
+
+:::: {.columns}
+::: {.column width="50%"}
+### Evidence awal yang dicari
+
+- pengalaman mahasiswa dan pengelola kantin;
+- pola harga, akses, dan sisa makanan;
+- constraint operasi, keamanan, dan regulasi;
+- indikator outcome yang dapat diuji.
+:::
+
+::: {.column width="50%"}
+### Yang tidak boleh diasumsikan
+
+- suara terbanyak pasti benar;
+- satu teknologi adalah jawaban awal;
+- stakeholder yang diam berarti setuju;
+- score tinggi berarti solusi sudah sempurna.
+:::
+::::
+
+::: {.notes}
+[Sources]
+
+- `../app3.py` — `DEFAULT_PROBLEM`, Q criteria, dan system prompt safeguards.
+:::
+
+## Demo sudah menunjukkan loop inti—tetapi perlu dirapikan
+
+:::: {.columns}
+::: {.column width="49%"}
+### Sudah bekerja secara konsep
+
+::: {.ready-list}
+- input Telegram dan web;
+- live feed yang refresh otomatis;
+- llama.cpp integration;
+- Q1–Q4 scoring dan critical gaps;
+- voting yang masuk ke cycle berikutnya;
+- riwayat analisis di SQLite.
+:::
+:::
+
+::: {.column width="51%"}
+### Sebelum dipakai lebih luas
+
+::: {.risk-list}
+- jalankan `app3.py`, bukan entry point lama;
+- samakan nama `TELEGRAM_BOT_TOKEN` di kode dan dokumentasi;
+- keluarkan `.env` dan database dari Git;
+- tambahkan tests serta pisahkan UI, storage, dan engine;
+- review data retention, consent, dan akses audit.
+:::
+:::
+::::
+
+::: {.notes}
+[Sources]
+
+- `../README.md` — documented run command dan environment variables.
+- `../app.py`, `../app2.py`, `../app3.py` — perbedaan implementasi dan nama token.
+- Git tracked-file inspection — `.env` dan `tise_demo.db` saat ini tercatat.
+:::
+
+## Nilai TISE terletak pada kualitas belajar bersama
+
+::: {.big-statement}
+TISE bukan mesin untuk menghasilkan jawaban tercepat.
+
+TISE adalah **control loop sosial-teknis** untuk membuat masalah, keputusan, dan evidence semakin jelas.
+:::
+
+::: {.signal-line}
+Demo berikutnya: kirim evidence → jalankan Q-Cycle 1 → jawab critical gap → lihat bagaimana Q1–Q4 berubah.
+:::
+
+**Pertanyaan penutup:** evidence apa yang akan membuat kita berani menjalankan pilot?
+
+::: {.notes}
+[Sources]
+
+- `../README.md` — iterative logic dan completion gate.
+- `../app3.py` — feedback loop dan completion messaging.
+:::
