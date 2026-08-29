@@ -1,0 +1,118 @@
+---
+title: "Mencerdaskan Kehidupan Bangsa di Era AI"
+subtitle: "Dari Smart System Menuju Smart Campus yang Mencerdaskan Manusia"
+
+author:
+  - name: Armein Z. R. Langi
+    email: armein@itb.ac.id
+    orcid: 0009-0007-1967-8304
+    affiliations:
+      - name: STEI ITB
+abstract: |
+  Tulisan ini membahas makna amanat mencerdaskan kehidupan bangsa pada era kecerdasan artifisial dan peran universitas dalam mewujudkannya melalui kampus cerdas. Sistem cerdas tidak seharusnya hanya mengambil alih fungsi kognitif manusia, tetapi juga perlu dirancang untuk meningkatkan kemampuan manusia dalam memahami persoalan, mengambil keputusan, bertindak, dan belajar. Untuk itu, tulisan ini mengusulkan TISE (*Triune Intelligence Smart Engineering*), yaitu pendekatan rekayasa yang mengorkestrasi kecerdasan alamiah individu, kecerdasan artifisial, dan kecerdasan kolektif. Kampus dipandang sebagai miniatur masyarakat sekaligus ruang yang tepat untuk menguji sistem tersebut melalui penyelesaian persoalan nyata, seperti penyediaan pangan sehat dan berkelanjutan. Dengan demikian, kampus cerdas bukan sekadar kampus yang sarat teknologi, melainkan kampus yang memberdayakan warganya dan menghasilkan prototipe masyarakat cerdas yang dapat direplikasi secara lebih luas.
+keywords:
+  - TISE
+  - Kampus Cerdas
+  - triune intelligence
+format:
+  academic-typst:
+    section-numbering: "1.1.1"
+---
+
+Topik yang kita bahas berangkat dari salah satu amanat besar konstitusi kita, yaitu **mencerdaskan kehidupan bangsa**. Pertanyaannya, apa arti amanat tersebut pada era kecerdasan artifisial (*Artificial Intelligence* atau AI)? Lebih khusus lagi, bagaimana universitas, melalui gagasan kampus cerdas (*smart campus*), dapat mengambil peran dalam mencerdaskan kehidupan bangsa?
+
+Saya melihat persoalan ini dari sudut pandang rekayasa. Dalam ilmu rekayasa, kita merancang dan membangun sistem untuk membantu manusia menyelesaikan masalah, memenuhi kebutuhan, dan mencapai tujuan. Kehadiran AI membawa perubahan besar terhadap cara kita melakukan rekayasa. Kini kita dapat membangun mesin, perangkat, organisasi, bahkan ekosistem yang mampu menjalankan berbagai fungsi yang dahulu hanya dapat dilakukan manusia. Sistem semacam ini lazim disebut *intelligent systems* atau sistem cerdas.
+
+Namun, justru di sinilah muncul pertanyaan yang lebih mendasar:
+
+**Ketika mesin semakin cerdas, apakah manusia yang menggunakannya juga menjadi semakin cerdas?**
+
+Pertanyaan tersebut menjadi titik berangkat pembahasan dalam tulisan ini.
+
+## Dari Demokrasi Politik Menuju Demokrasi Aspirasi
+
+Mencerdaskan kehidupan bangsa, menurut saya, tidak cukup dimaknai sebagai membuat masyarakat mengetahui lebih banyak informasi. Tujuannya adalah **memberdayakan manusia agar mampu memenuhi kebutuhannya dan mencapai aspirasinya**. Dalam pengertian ini, mencerdaskan kehidupan bangsa sesungguhnya juga merupakan bagian penting dari demokrasi.
+
+Demokrasi bukan hanya kekuasaan rakyat untuk menentukan siapa yang menjadi pemimpin. Demokrasi juga berarti memberi setiap warga kemampuan untuk berpartisipasi dalam menentukan dan membangun masa depannya sendiri. Dengan kata lain, demokrasi mencakup **kemampuan untuk memilih (*power to choose*)** sekaligus **kemampuan untuk mewujudkan (*power to achieve*)** aspirasi kehidupan. Oleh karena itu, masyarakat yang benar-benar demokratis seharusnya juga menjadi masyarakat yang semakin cerdas, berdaya, dan mampu menyelesaikan persoalannya sendiri.
+
+## Apa Itu Sistem Cerdas?
+
+Dalam rekayasa sistem, suatu sistem dapat disebut cerdas apabila mampu menjalankan siklus **Perceive–Understand–Decide–Act–Learn (PUDAL)**, atau mempersepsi, memahami, memutuskan, bertindak, dan belajar. Sistem mula-mula menangkap apa yang terjadi di lingkungannya, lalu berusaha memahami situasi tersebut. Berdasarkan pemahaman itu, sistem mengambil keputusan dan mewujudkannya menjadi tindakan. Dari hasil tindakannya, sistem belajar agar dapat mengambil keputusan yang lebih baik pada kesempatan berikutnya.
+
+Siklus semacam ini semakin banyak diterapkan pada berbagai artefak rekayasa. Mobil dikembangkan menjadi *smart car*, gedung menjadi *smart building*, kota menjadi *smart city*, dan kampus menjadi *smart campus*. Meskipun demikian, penerapan tersebut menghadirkan persoalan penting yang perlu dicermati.
+
+## Ketika Mesin Semakin Cerdas, Apakah Manusia Menjadi Bodoh?
+
+Kemampuan manusia berkembang melalui penggunaan. Sebagaimana otot menjadi lebih kuat ketika sering digunakan dan kemampuan tubuh untuk berlari meningkat melalui latihan, kecerdasan pun bertumbuh melalui kegiatan yang terus dilakukan. Semakin sering manusia mengamati, bertanya, memahami, mengambil keputusan, memecahkan masalah, dan belajar dari kesalahan, semakin berkembang pula kecerdasannya. Oleh karena itu, kita perlu berhati-hati ketika membangun mesin yang mengambil alih semakin banyak fungsi kecerdasan manusia.
+
+Setidaknya terdapat dua risiko besar. Risiko pertama adalah **hilangnya keterampilan (*deskilling*)**. Kemampuan yang jarang dipakai akan melemah secara perlahan. Jika manusia tidak lagi menghitung karena mesin selalu melakukannya, kemampuan berhitung dapat menurun. Jika manusia tidak lagi menulis karena AI selalu menulis, kemampuan menulis dapat berkurang. Demikian pula, jika algoritma selalu menentukan pilihan, kemampuan manusia dalam mengambil keputusan pada akhirnya dapat melemah.
+
+Risiko kedua bahkan lebih serius, yaitu penyerahan keputusan-keputusan penting dalam kehidupan manusia kepada mesin atau, lebih tepatnya, kepada pihak yang mengendalikan mesin dan data tersebut. Karena itu, makna **rekayasa cerdas (*smart engineering*)** perlu dirumuskan ulang. Tujuan kita bukan sekadar **merekayasa sistem yang cerdas**, melainkan **merekayasa sistem cerdas yang mencerdaskan manusia**.
+
+Sistem yang baik tidak membuat manusia semakin bergantung kepadanya, tetapi mengembangkan kemampuan manusia melalui penggunaannya. Semakin sering sistem tersebut digunakan, semakin pintar penggunanya; pada saat yang sama, sistem juga semakin pintar dalam membantu manusia mengembangkan kepintarannya. Dengan demikian, terbentuk proses koevolusi (*co-evolution*): manusia belajar dari sistem dan sistem belajar dari manusia.
+
+## Sistem Cerdas Belum Tentu Sistem Pintar
+
+Dalam tulisan ini, saya membedakan dua istilah yang sering dianggap sama, yaitu **cerdas** dan **pintar**. Sebuah sistem dapat disebut cerdas apabila memiliki kemampuan mempersepsi, memahami, mengambil keputusan, bertindak, dan belajar. Sementara itu, sistem pintar adalah **sistem cerdas yang mampu menyelesaikan masalah**. Dengan demikian, ukuran kepintaran bukan semata-mata banyaknya informasi yang diketahui, melainkan **jenis dan tingkat kerumitan masalah yang mampu diselesaikan**. Semakin kompleks masalah yang dapat diselesaikan, semakin tinggi pula kepintaran suatu sistem.
+
+Definisi tersebut juga menarik jika diterapkan pada manusia. Pada dasarnya setiap manusia memiliki kecerdasan, tetapi seseorang dapat lebih pintar dalam suatu persoalan dibandingkan orang lain. Seorang ahli matematika mungkin sangat pintar menyelesaikan masalah matematika, tetapi belum tentu lebih pintar daripada seorang petani ketika harus menentukan waktu yang tepat untuk menanam benih. Bahkan, ada satu wilayah tempat setiap orang merupakan ahli terbaik, yaitu **menjadi dirinya sendiri**. Tidak seorang pun memiliki pengalaman menjadi diri kita sebanyak diri kita sendiri. Oleh sebab itu, kecerdasan manusia tidak boleh direduksi menjadi sekadar skor atau kemampuan menjawab soal. Kecerdasan yang melekat pada individu ini saya sebut **kecerdasan alamiah (*Natural Intelligence*)**.
+
+## Sebelum AI, Kita Sudah Memiliki Dua Kecerdasan
+
+Sebelum AI hadir, manusia sesungguhnya telah hidup dengan dua bentuk kecerdasan. Bentuk pertama adalah **kecerdasan alamiah**, yaitu kecerdasan individual yang membawa pengalaman, intuisi, imajinasi, dan pengetahuan yang unik. Hampir semua pengetahuan baru pada awalnya lahir dari kecerdasan individu. Pernah ada masa ketika relativitas hanya merupakan gagasan Einstein dan hukum Newton hanya merupakan pemikiran Newton. Di sekitar kita pun terdapat beragam kecerdasan individual yang diwujudkan melalui gagasan para pemikir, seperti Onno W. Purbo, Bambang Riyanto, Kadarsah Suryadi, Suhono Harso Supangkat, dan banyak tokoh lainnya.
+
+Bentuk kedua adalah **kecerdasan kolektif (*Collective Intelligence*)**, yakni pengetahuan yang dikembangkan, diuji, dikoreksi, dan akhirnya diterima oleh suatu komunitas dalam bentuk ilmu pengetahuan, teori, standar, norma, atau budaya. Teori relativitas, misalnya, kini tidak lagi hanya menjadi kecerdasan Einstein, tetapi telah menjadi bagian dari kecerdasan kolektif umat manusia. Demikian pula berbagai teori yang diajarkan di universitas.
+
+Kini hadir bentuk kecerdasan ketiga, yaitu **kecerdasan artifisial (*Artificial Intelligence*)**. AI sangat kuat dalam menemukan pola dari data, melakukan inferensi, membuat prediksi, menghasilkan berbagai kemungkinan jawaban, dan membantu manusia menavigasi ruang solusi yang sangat besar. Dengan demikian, saat ini terdapat tiga bentuk kecerdasan: **Natural Intelligence, Artificial Intelligence, dan Collective Intelligence**—kecerdasan individu, kecerdasan mesin, dan kecerdasan komunitas. Kombinasi ketiganya saya sebut **Triune Intelligence**.
+
+## TISE: Triune Intelligence Smart Engineering
+
+Dari gagasan tersebut lahir konsep **TISE (*Triune Intelligence Smart Engineering*)**. Prinsipnya adalah tidak menggantikan kecerdasan manusia dengan AI dan tidak pula membiarkan manusia bekerja sendirian ketika tersedia kecerdasan kolektif serta kecerdasan mesin. Sebaliknya, ketiga bentuk kecerdasan tersebut perlu **diorkestrasi** agar saling melengkapi.
+
+*Natural Intelligence* menghadirkan kreativitas, pengalaman, nilai, intuisi, dan aspirasi manusia. *Artificial Intelligence* membantu mengeksplorasi data, alternatif, simulasi, prediksi, serta berbagai kemungkinan solusi. Sementara itu, *Collective Intelligence* membawa ilmu pengetahuan, pengalaman masyarakat, norma, aturan, dan kebijaksanaan bersama. *Smart engineering* terwujud ketika ketiga kecerdasan tersebut bekerja secara sinergis untuk memecahkan masalah.
+
+## Dua Jenis Masalah Manusia
+
+Sebagaimana kecerdasan dapat bersifat individual maupun kolektif, persoalan manusia pun dapat dikelompokkan ke dalam dua kategori besar. Kategori pertama adalah **kebutuhan bersama (*public needs*)**, seperti pangan, kesehatan, pendidikan, transportasi, energi, keamanan, dan lingkungan hidup. Persoalan-persoalan tersebut disebut kebutuhan bersama karena dialami oleh banyak orang dan penyelesaiannya memengaruhi kehidupan masyarakat secara luas.
+
+Namun, manusia tidak hidup hanya untuk memenuhi kebutuhan. Manusia juga memiliki **aspirasi**, yaitu gambaran tentang keadaan yang belum ada, tetapi ingin diwujudkan. Seseorang mungkin ingin menjadi ilmuwan atau seniman, membangun perusahaan, menyelesaikan persoalan di desanya, atau mewujudkan gagasan yang belum pernah terpikirkan oleh siapa pun. Oleh karena itu, masyarakat cerdas bukan sekadar masyarakat yang kebutuhannya terpenuhi, melainkan masyarakat yang memberi manusia ruang untuk **membayangkan masa depan sekaligus kemampuan untuk mewujudkannya**.
+
+## Universitas sebagai Mini-Universe
+
+Di sinilah universitas memiliki peran strategis. Kata *university* menarik karena berdekatan dengan kata *universe*. Dengan kedekatan tersebut, universitas dapat dibayangkan sebagai **miniatur semesta (*mini-universe*)**, yakni sebuah dunia kecil yang mencakup pendidikan, pangan, kesehatan, transportasi, energi, perumahan, teknologi, ekonomi, budaya, organisasi, penelitian, seni, dan masyarakat. Di dalamnya terdapat mahasiswa, dosen, tenaga kependidikan, kantin, rumah sakit, laboratorium, kendaraan, energi, data, dan teknologi. Yang terpenting, kampus dihuni oleh orang-orang yang setiap hari bekerja untuk **berpikir dan belajar**.
+
+Karena itu, kampus merupakan tempat yang sangat baik untuk membangun prototipe masyarakat masa depan. Dalam rekayasa, ketika menghadapi sistem yang sangat kompleks, kita biasanya tidak langsung membangunnya dalam skala besar. Kita terlebih dahulu membuat prototipe atau *minimum viable system*, kemudian menguji, mempelajari, memperbaiki, dan memperbesar skalanya secara bertahap.
+
+Jika kita ingin membangun masyarakat cerdas (*smart society*), upaya tersebut dapat dimulai dari **kampus cerdas (*smart campus*)**. Kampus dapat menjadi benih masyarakat cerdas, bukan sekadar dengan memenuhi ruangnya dengan sensor, kamera pengawas, aplikasi, dan pusat data, tetapi dengan menggunakan teknologi untuk meningkatkan kemampuan manusia dalam menyelesaikan persoalan.
+
+## Contoh Sederhana: Persoalan Makan
+
+Sebagai contoh, mari kita mengambil persoalan yang sangat mendasar, yaitu pangan. Gagasan penyediaan makanan bergizi merupakan gagasan yang sangat penting. Secara sedikit hiperbolis, kita bahkan dapat bertanya: jika gagasan itu baik, mengapa makanan hanya diberikan sekali, bukan pada pagi, siang, dan malam? Mengapa hanya anak sekolah yang menjadi perhatian, bukan pula ayah dan ibunya? Pertanyaan tersebut mengandung persoalan serius tentang cara kita menempatkan kebutuhan dasar manusia.
+
+Saat ini, kita bersedia menghabiskan miliaran dolar untuk menyediakan catu daya (*power supply*) bagi pusat data agar mesin-mesin AI tidak pernah kehabisan energi. Lalu, mengapa kita tidak sama seriusnya memikirkan catu daya manusia? Bukankah manusia juga memerlukan energi? Dalam konteks ini, makanan yang sehat dan bergizi merupakan catu daya bagi manusia.
+
+Saya bahkan ingin mengatakan:
+
+**kalau sebagian besar energi kehidupan seseorang masih habis hanya untuk mencari makan, mungkin kita belum dapat mengatakan bahwa kita telah membangun masyarakat yang benar-benar cerdas.**
+
+Meskipun demikian, menyediakan pangan yang sehat, terjangkau, berkualitas, berkelanjutan, dan produktif bagi jutaan manusia jelas bukan persoalan sederhana. Persoalan ini merupakan masalah rekayasa yang kompleks (*complex engineering problem*) karena melibatkan produsen, distribusi, pembiayaan, teknologi, data, pengendalian kualitas, sistem insentif, dan partisipasi masyarakat. Dengan kata lain, penyelesaiannya membutuhkan **sistem yang sangat pintar**.
+
+## Mengapa Tidak Dimulai dari Kampus?
+
+Kampus merupakan tempat yang tepat untuk mencoba sistem tersebut. Bayangkan sebuah kampus yang memberikan akses makanan sehat dan bergizi kepada seluruh warganya. Dalam ekosistem ini, petani memperoleh pasar yang baik, kantin tetap mendapatkan keuntungan yang layak, dan mahasiswa dapat menikmati makanan dengan harga terjangkau. Pada saat yang sama, sisa makanan diminimalkan, kandungan nutrisi dipantau, rantai pasok direncanakan, dan AI digunakan untuk memprediksi permintaan. Para peneliti dapat mengembangkan inovasi pangan, sedangkan mahasiswa menjadikan seluruh proses tersebut sebagai laboratorium pembelajaran. Dengan dukungan data dan pengalaman, keseluruhan sistem akan terus belajar dan berkembang.
+
+Gambaran tersebut menunjukkan makna kampus cerdas yang saya maksud. Kampus cerdas bukanlah kampus yang memiliki teknologi paling banyak, melainkan kampus yang **semakin mampu memecahkan persoalan manusia di dalamnya**. Lebih jauh lagi, kampus tidak hanya menyelesaikan masalah pangan, tetapi juga menciptakan **model masyarakat** yang dapat direplikasi di luar kampus. Dengan cara inilah, *smart campus* dapat berkembang menjadi *smart community*, lalu menjadi *smart society*.
+
+## Jangan Menunggu Pemerintah Berpikir Sendiri
+
+Pada titik ini, demokrasi kembali menjadi penting. Persoalan sebesar ini tidak seharusnya diserahkan seluruhnya kepada presiden atau pemerintah. Hal itu bukan berarti pemerintah tidak penting, melainkan menegaskan bahwa **bangsa ini terlalu besar untuk dipikirkan hanya oleh pemerintah**. Dalam demokrasi, semua pihak ikut berpikir: universitas, industri, masyarakat, petani, dan mahasiswa. Kini AI pun dapat dilibatkan untuk membantu proses berpikir tersebut.
+
+Kerja bersama itulah yang mencerminkan **Triune Intelligence**, yaitu kecerdasan individu, kecerdasan kolektif, dan kecerdasan artifisial yang diorkestrasi untuk memecahkan persoalan nyata. Karena itu, pembahasan ini tidak hanya ditutup dengan sebuah kesimpulan, tetapi juga dengan ajakan untuk melakukan eksperimen. Alih-alih membiarkan satu orang menjelaskan seluruh penyelesaian persoalan, kita dapat memanfaatkan berbagai kecerdasan yang tersedia melalui aplikasi TISE dan memulai prosesnya dengan satu pertanyaan:
+
+**Bagaimana kita merancang sebuah smart campus yang bukan hanya menggunakan Artificial Intelligence, tetapi benar-benar membuat setiap orang di dalamnya menjadi semakin cerdas, semakin berdaya, dan semakin mampu mewujudkan aspirasinya?**
+
+Jika prototipenya dapat dibangun di kampus, suatu hari model tersebut mungkin dapat diterapkan di luar kampus. Di situlah kita dapat menemukan makna baru dari amanat konstitusi pada era AI:
+
+**bukan sekadar membangun mesin yang semakin cerdas, tetapi membangun bangsa yang semakin cerdas karena menggunakan mesin tersebut.**
+
+Pada akhirnya, kemajuan teknologi perlu diukur bukan hanya dari kecanggihan mesin yang berhasil dibangun, tetapi juga dari bertumbuhnya kecerdasan, keberdayaan, dan kemampuan manusia dalam mewujudkan kehidupan yang dicita-citakan.
